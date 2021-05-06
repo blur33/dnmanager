@@ -1,0 +1,10 @@
+.rdt_TableHeader {
+    display: none !important;
+}
+.card .card-body {
+    /* padding: 5px !important; */
+}
+.rdt_TableCell img,
+.rdt_TableBody img {
+    height: 100px;
+}

@@ -1,0 +1,132 @@
+.card {
+    width: 100%;
+}
+.fl-r {
+    float: right;
+}
+.wd-17 {
+    width: 17%;
+}
+.center {
+    text-align: center;
+}
+.heart-svg {
+    height: 50px;
+}
+.heart-svg:hover {
+    cursor: pointer;
+}
+
+.heart-container {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.heart-clip {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    -webkit-clip-path: url(#svgPath);
+    clip-path: url(#svgPath);
+}
+.heart-clip:hover {
+    -webkit-animation: pulse 0.6s 0.3s infinite;
+    animation: pulse 0.6s 0.3s infinite;
+}
+.heart-clip:hover::before {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+.heart-clip::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #d32f2f;
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    transition: opacity 0.2s linear, -webkit-transform 0.2s linear;
+    transition: transform 0.2s linear, opacity 0.2s linear;
+    transition: transform 0.2s linear, opacity 0.2s linear,
+        -webkit-transform 0.2s linear;
+    -webkit-transform-origin: center 60%;
+    transform-origin: center 60%;
+}
+
+.heart-stroke {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: #d32f2f;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    30% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    60% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    30% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    60% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.rdt_TableRow {
+    min-height: 100px !important;
+}
+.rdt_TableCol {
+    color: #51cbce !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+.categoryPage .rdt_TableRow {
+    min-height: 50px !important;
+}
+
+/*logo */
+.logo {
+    padding: 0px !important;
+}
+.card .card-header {
+    /* padding: 15px 0; */
+}
+.card .card-body {
+    /* padding: 0px !important; */
+}
+.label-file {
+    cursor: pointer;
+    /* Style as you please, it will become the visible UI component. */
+}
+
+#upload-photo {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
